@@ -1,0 +1,18 @@
+<div class="card mb-4 box-shadow" style="max-width: 250px;">
+    
+    <div class="card-body">
+      <h5 class="card-title">{{ customer.name }}</h5>
+      <p class="card-text">tel: {{ customer.tel}}</p>
+      <p class="card-text">email: {{ customer.email }}</p>
+     
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col">
+        <button class="btn btn-danger col-xl-4 mt-2" (click)="deleteCustomer(customer.id)">
+          Delete
+        </button>
+      </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,10 @@
+<div class="mt-2 mb-4">
+    <button class="btn btn-success" (click)="onAddCustomer()">
+         Add Customer
+    </button>
+</div>
+<div  class="row" >
+    <div class="col-md-3"  *ngFor="let customer of customers">
+            <app-customer [customer]="customer" (customerDeleted)="onCustomerDeleted($event)"></app-customer>     
+    </div>
+</div>

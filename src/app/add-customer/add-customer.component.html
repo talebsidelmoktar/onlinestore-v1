@@ -1,0 +1,38 @@
+
+<h2>Add customer</h2>
+<form (ngSubmit)="onSubmit()" #customerForm="ngForm">
+    <div class="form-group">
+        <label for="code">Code:</label>
+        <input type="text" id="code" name="code" class="form-control" required #code="ngModel" [(ngModel)]="customer.id"
+        [ngClass]="{'is-invalid':code.invalid && code.dirty,'is-valid':code.valid}">
+        <div *ngIf="code.invalid && (code.dirty || code.touched)" class="invalid-feedback">
+            <div>Code is required.</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" required [(ngModel)]="customer.name"
+            #name="ngModel" [ngClass]="{'is-invalid':name.invalid && name.dirty,'is-valid':name.valid}">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+            Name is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="price">tel:</label>
+        <input type="number" id="price" name="price" class="form-control"  [(ngModel)]="customer.tel"
+            #price="ngModel" [ngClass]="{'is-invalid':price.invalid && price.dirty,'is-valid':price.valid}">
+        <div *ngIf="price.invalid && (price.dirty || price.touched)"class="invalid-feedback">
+            <div>tel must be inserted</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="quantity">email:</label>
+        <input type="string" id="email" name="quantity" class="form-control" 
+            [(ngModel)]="customer.email" #quantity="ngModel" [ngClass]="{'is-invalid':quantity.invalid && quantity.dirty,'is-valid':quantity.valid}">
+        <div *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)"class="invalid-feedback">
+            <div>email must be containing @.</div>
+        </div>
+    </div>
+ 
+     <button type="submit" [disabled]="customerForm.invalid" class="btn btn-primary mt-2">Save</button> 
+</form>

@@ -10,6 +10,11 @@ import { SigninComponent } from './signin/signin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { FormsModule } from '@angular/forms';
+import { PostListComponent } from './post-list/post-list.component';
+import { PostListItemComponent } from './post-list-item/post-list-item.component';
+import { CustomersComponent } from './customers/customers.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { CustomerComponent } from './customer/customer.component';
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     SigninComponent,
     NotFoundComponent,
-    EditProductComponent
+    EditProductComponent,
+    PostListComponent,
+    PostListItemComponent,
+    CustomersComponent,
+    AddCustomerComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
